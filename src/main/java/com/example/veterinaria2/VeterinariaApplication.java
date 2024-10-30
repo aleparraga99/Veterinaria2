@@ -1,13 +1,13 @@
-package com.example.veterinaria2;
+package com.veterinaria.veterinaria;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Veterinaria2Application {
+public class VeterinariaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Veterinaria2Application.class, args);
+		SpringApplication.run(VeterinariaApplication.class, args);
 	}
 
 }
