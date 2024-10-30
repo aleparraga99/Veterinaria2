@@ -5,8 +5,6 @@ import com.veterinaria.veterinaria.DTOS.MascotaResponses;
 import com.veterinaria.veterinaria.Entity.Mascota;
 import org.springframework.stereotype.Component;
 
-import java.util.List;
-
 
 @Component
 public class MascotaMapper {

@@ -2,19 +2,12 @@ package com.veterinaria.veterinaria.Controller;
 
 import com.veterinaria.veterinaria.DTOS.AdoptanteRequest;
 import com.veterinaria.veterinaria.DTOS.AdoptanteResponses;
-import com.veterinaria.veterinaria.DTOS.MascotaRequest;
-import com.veterinaria.veterinaria.DTOS.MascotaResponses;
 import com.veterinaria.veterinaria.Entity.Adoptante;
-import com.veterinaria.veterinaria.Entity.Mascota;
 import com.veterinaria.veterinaria.Mappers.AdoptanteMapper;
-import com.veterinaria.veterinaria.Mappers.MascotaMapper;
 import com.veterinaria.veterinaria.Services.AdoptanteService;
-import com.veterinaria.veterinaria.Services.MascotaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/adoptante")
