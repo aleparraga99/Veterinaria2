@@ -1,0 +1,3 @@
+- agregar los metodos que faltan a los controllers
+	- read(para mostrar todos los metodos de la base de datos).
+	-
