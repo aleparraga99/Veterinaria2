@@ -9,26 +9,27 @@ import lombok.Setter;
 @Entity
 public class Adoptante {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "nombre", length = 50, nullable = false)
+    @Column(name = "nombre", length = 100, nullable = false)
     private String nombre;
 
-    @Column(name = "apellido", length = 50, nullable = false)
+    @Column(name = "apellido", length = 100, nullable = false)
     private String apellido;
 
     @Column(name = "dni", length = 20, nullable = false)
     private int dni;
 
-    @Column(name = "telefono", length = 20, nullable = false)
-    private int telefono;
+    @Column(name = "telefono", length = 20)
+    private long telefono;
 
-    @Column(name = "email", length = 50, nullable = false)
+    @Column(name = "email", length = 150)
     private String email;
 
-    public Adoptante(int id, String nombre, String apellido, int dni, int telefono, String email) {
+    public Adoptante(int id, String nombre, String apellido, int dni, long telefono, String email) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;

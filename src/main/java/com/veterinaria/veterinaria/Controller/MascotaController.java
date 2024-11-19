@@ -9,6 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 
 @RestController
 @RequestMapping("/mascotas") //Mapeamos las solicitudes de Mascota
@@ -41,7 +43,16 @@ public class MascotaController {
         mascotaService.deleteById(id);
         return ResponseEntity.noContent().build();
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<MascotaResponses>> obtenerTodasLasMascotas() {
+        List<Mascota> mascots = mascotaService.findAll();
+
+        List<MascotaResponses> responses = mascots.stream()
+                .map(mascotaMapper::toResponse)
+                .toList();
+
+        return ResponseEntity.ok(responses);
+    }
+
 }
-
-
-

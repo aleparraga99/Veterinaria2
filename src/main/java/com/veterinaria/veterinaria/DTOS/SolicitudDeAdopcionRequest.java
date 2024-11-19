@@ -12,9 +12,9 @@ import java.util.Date;
 
 public class SolicitudDeAdopcionRequest {
 
-private int id;
-private Date fecha;
-private String estado;
-private Mascota mascota;
-private Adoptante adoptante;
+    private int id;
+    private Date fecha;
+    private String estado;
+    private Mascota mascota;
+    private Adoptante adoptante;
 }

@@ -33,4 +33,13 @@ public class MascotaService {
 
         mascotaRepository.deleteById(id);
     }
+
+    public void testDatabaseConnection() {
+        try {
+            long count = mascotaRepository.count();
+            System.out.println("Número de mascotas en la base de datos: " + count);
+        } catch (Exception e) {
+            System.err.println("Error al conectar con la base de datos: " + e.getMessage());
+        }
+    }
 }

@@ -13,7 +13,10 @@ public class AdoptanteResponses {
     private String nombre;
     private String apellido;
     private int dni;
-    private int telefono;
+    private long telefono;
     private String email;
 
+    public void setTelefono(long telefono) {
+
+    }
 }
