@@ -1,11 +1,12 @@
 package com.veterinaria.veterinaria.DTOS;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-
+@Data
 public class AdoptanteRequest {
 
     private int id;
@@ -14,4 +15,6 @@ public class AdoptanteRequest {
     private int dni;
     private long telefono;
     private String email;
+
+
 }

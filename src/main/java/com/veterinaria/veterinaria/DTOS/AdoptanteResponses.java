@@ -16,7 +16,7 @@ public class AdoptanteResponses {
     private long telefono;
     private String email;
 
-    public void setTelefono(long telefono) {
+    public void setTelefono(String telefono) {
 
     }
 }

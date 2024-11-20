@@ -27,15 +27,4 @@ public class SolicitudDeAdopcion {
     @Column(name = "adoptante", length = 50, nullable = false)
     private Adoptante adoptante;
 
-    public SolicitudDeAdopcion(int id, Date fecha, String estado, Mascota mascota, Adoptante adoptante) {
-        this.id = id;
-        this.fecha = fecha;
-        this.estado = estado;
-        this.mascota = mascota;
-        this.adoptante = adoptante;
-    }
-
-    public SolicitudDeAdopcion() {
-
-    }
 }
