@@ -19,8 +19,13 @@ public class MascotaController {
     @Autowired
     private MascotaService mascotaService;
 
+
     @Autowired
     private MascotaMapper mascotaMapper;
+    @GetMapping("/estado/{id}")
+    public boolean obtenerEstadoMascota(@PathVariable int id) {
+        return mascotaService.traerEstadoMascota(id);
+    }
 
     @PostMapping("/create")
     public ResponseEntity<MascotaResponses> crearMascota(@RequestBody MascotaRequest mascotaRequest) {
@@ -54,5 +59,6 @@ public class MascotaController {
 
         return ResponseEntity.ok(responses);
     }
+
 
 }

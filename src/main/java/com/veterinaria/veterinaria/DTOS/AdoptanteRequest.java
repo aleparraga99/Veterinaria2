@@ -12,8 +12,8 @@ public class AdoptanteRequest {
     private int id;
     private String nombre;
     private String apellido;
-    private int dni;
-    private long telefono;
+    private String dni;
+    private String telefono;
     private String email;
 
 
