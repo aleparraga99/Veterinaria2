@@ -42,4 +42,10 @@ public class MascotaService {
             System.err.println("Error al conectar con la base de datos: " + e.getMessage());
         }
     }
+    
+    public boolean traerEstadoMascota(int id){
+        return mascotaRepository.findById(id)
+                .map(Mascota::getEstado)
+                .orElseThrow(() -> new RuntimeException("Mascota no encontrada"));
+    }
 }

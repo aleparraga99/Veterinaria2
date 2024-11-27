@@ -21,10 +21,12 @@ public class SolicitudDeAdopcion {
     @Column(name = "estado", length = 100, nullable = false)
     private String estado;
 
-    @Column(name = "mascota", length = 50, nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "mascota_id", referencedColumnName = "id", nullable = false)
     private Mascota mascota;
 
-    @Column(name = "adoptante", length = 50, nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "adoptante_id", referencedColumnName = "id", nullable = false)
     private Adoptante adoptante;
 
 }

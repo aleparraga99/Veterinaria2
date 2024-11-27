@@ -9,8 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
-@RequestMapping("/adoptante")
+@RequestMapping("/api/adoptantes")
 class AdoptanteController {
 
     @Autowired
@@ -18,6 +21,13 @@ class AdoptanteController {
 
     @Autowired
     private AdoptanteMapper adoptanteMapper;
+
+    @GetMapping
+    public List<Adoptante> getAlladoptantes(){
+        List<Adoptante> listNull= new ArrayList<>();
+        return listNull;//este metodo proviene de exteneder el JPA repository
+    }
+
 
     @PostMapping("/create")
     public ResponseEntity<AdoptanteResponses> crearAdoptante(@RequestBody AdoptanteRequest adoptanteRequest) {
@@ -28,7 +38,7 @@ class AdoptanteController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<AdoptanteResponses> obtenerAdoptantePorId(@PathVariable Integer id) {
+    public ResponseEntity<AdoptanteResponses> obtenerAdoptantePorId(@PathVariable Long  id) {
         Adoptante adoptante = adoptanteService.findById(id)
                 .orElseThrow(() -> new RuntimeException("Adoptante no encontrado"));
         AdoptanteResponses adoptanteObtenido = adoptanteMapper.toResponse(adoptante);
@@ -36,7 +46,7 @@ class AdoptanteController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarAdoptante(@PathVariable Integer id) {
+    public ResponseEntity<Void> eliminarAdoptante(@PathVariable Long id) {
         adoptanteService.deleteById(id);
         return ResponseEntity.noContent().build();
     }

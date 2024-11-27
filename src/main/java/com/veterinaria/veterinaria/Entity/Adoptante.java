@@ -17,7 +17,7 @@ public class Adoptante {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
 
     @Column(name = "nombre", length = 100, nullable = false)
     private String nombre;
@@ -26,7 +26,7 @@ public class Adoptante {
     private String apellido;
 
     @Column(name = "dni", nullable = false)
-    private int dni;
+    private String dni;
 
     @Column(name = "telefono")
     private String telefono;
@@ -35,3 +35,4 @@ public class Adoptante {
     private String email;
 
 }
+

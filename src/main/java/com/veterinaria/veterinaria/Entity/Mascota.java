@@ -27,7 +27,8 @@ public class Mascota {
     private String especie;
 
     public boolean getEstado() {
-        return false;
+
+        return estado;
     }
 }
 
