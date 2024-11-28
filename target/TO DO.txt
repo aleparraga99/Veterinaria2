@@ -1,0 +1,13 @@
+- agregar los metodos que faltan a los controllers
+	- read(para mostrar todos los metodos de la base de datos).
+	-
+- Modificación:
+  Como parte del proyecto de gestión de adopciones, vamos a añadir una funcionalidad que permita a los adoptantes iniciar un proceso de adopción para una mascota disponible. La idea es que este proceso simula cómo sería una adopción real y determine si la solicitud es aprobada o rechazada de manera automática, sin almacenar datos permanentes.
+
+
+  Para implementar esta simulación, será necesario incluir un método que permita a un adoptante intentar adoptar una mascota, tomando en cuenta su disponibilidad y generando una "respuesta de simulación". Este método debería considerar la información del adoptante y la mascota, y decidir de alguna manera si la adopción procede o no. En caso de que la mascota ya esté adoptada, el método debería manejar esta situación apropiadamente.
+
+
+  Se espera que la solución conecte las entidades ya desarrolladas (Adoptante, Mascota, y Solicitud Adopción). Piensen en cómo podrían estructurar la lógica para que el método refleje el proceso real de evaluación de una adopción, y exploren una posible forma de "aprobar" o "rechazar" la solicitud en la simulación.
+
+  (Se debe crear los métodos correspondientes en las controladoras.)
