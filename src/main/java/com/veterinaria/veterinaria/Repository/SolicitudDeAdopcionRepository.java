@@ -13,6 +13,6 @@ public interface SolicitudDeAdopcionRepository extends JpaRepository<SolicitudDe
 
     List<SolicitudDeAdopcion> findByFecha(Date fecha);
 
-    List<SolicitudDeAdopcion> findByEstado(String estado);
+    List<SolicitudDeAdopcion> findByEstado(Boolean estado);
 
 }

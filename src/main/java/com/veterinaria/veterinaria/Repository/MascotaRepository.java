@@ -15,7 +15,7 @@ public interface MascotaRepository extends JpaRepository<Mascota, Integer> {
 
     List<Mascota> findByEspecie(String especie);
 
-    List<Mascota> findByEstado(boolean estado);
+    List<Mascota> findByEstado(Boolean estado);
 
     @Query("SELECT m.estado FROM Mascota m WHERE m.id = :idMascota")
     String findEstadoById(@Param("idMascota") Long id);

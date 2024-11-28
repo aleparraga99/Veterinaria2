@@ -9,9 +9,6 @@ import lombok.Setter;
 public class MascotaRequest {
     private String nombre;
     private String especie;
-    private boolean estado;
+    private Boolean estado;
 
-    public boolean getEstado() {
-        return false;
-    }
 }

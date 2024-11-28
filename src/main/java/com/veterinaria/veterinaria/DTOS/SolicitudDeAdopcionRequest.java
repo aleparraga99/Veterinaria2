@@ -14,7 +14,7 @@ public class SolicitudDeAdopcionRequest {
 
     private int id;
     private Date fecha;
-    private String estado;
+    private Boolean estado;
     private Mascota mascota;
     private Adoptante adoptante;
 }

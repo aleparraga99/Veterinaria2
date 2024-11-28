@@ -19,7 +19,7 @@ public class SolicitudDeAdopcionResponses extends SolicitudDeAdopcion {
 
     private int id;
     private Date fecha;
-    private String estado;
+    private Boolean estado;
     private Mascota mascota;
     private Adoptante adoptante;
 }

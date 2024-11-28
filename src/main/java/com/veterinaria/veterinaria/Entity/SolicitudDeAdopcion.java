@@ -19,7 +19,7 @@ public class SolicitudDeAdopcion {
     private Date fecha;
 
     @Column(name = "estado", length = 100, nullable = false)
-    private String estado;
+    private Boolean estado;
 
     @ManyToOne
     @JoinColumn(name = "mascota_id", referencedColumnName = "id", nullable = false)
@@ -30,5 +30,9 @@ public class SolicitudDeAdopcion {
     private Adoptante adoptante;
 
     public SolicitudDeAdopcion(Adoptante adoptante, Mascota mascota, java.sql.Date fecha) {
+    }
+
+    public SolicitudDeAdopcion() {
+
     }
 }

@@ -3,6 +3,7 @@ package com.veterinaria.veterinaria.Mappers;
 
 import com.veterinaria.veterinaria.DTOS.SolicitudDeAdopcionRequest;
 import com.veterinaria.veterinaria.DTOS.SolicitudDeAdopcionResponses;
+import com.veterinaria.veterinaria.Entity.Mascota;
 import com.veterinaria.veterinaria.Entity.SolicitudDeAdopcion;
 import org.springframework.stereotype.Component;
 
@@ -10,15 +11,15 @@ import org.springframework.stereotype.Component;
 public class SolicitudDeAdopcionMapper {
 
     public SolicitudDeAdopcionResponses toResponse(SolicitudDeAdopcion solicitudDeAdopcion) {
-
-        SolicitudDeAdopcion response = new SolicitudDeAdopcion();
+        SolicitudDeAdopcionResponses response = new SolicitudDeAdopcionResponses();
         response.setId(solicitudDeAdopcion.getId());
         response.setFecha(solicitudDeAdopcion.getFecha());
         response.setEstado(solicitudDeAdopcion.getEstado());
         response.setMascota(solicitudDeAdopcion.getMascota());
         response.setAdoptante(solicitudDeAdopcion.getAdoptante());
-        return (SolicitudDeAdopcionResponses) response;
+        return response;
     }
+
 
     public SolicitudDeAdopcion toEntity(SolicitudDeAdopcionRequest request){
 

@@ -10,6 +10,6 @@ public class MascotaResponses {
     private int id;
     private String nombre;
     private String especie;
-    private boolean estado;
+    private Boolean estado;
 
 }

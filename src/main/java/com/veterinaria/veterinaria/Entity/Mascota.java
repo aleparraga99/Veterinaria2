@@ -20,18 +20,14 @@ public class Mascota {
     @Column(name = "nombre", length = 50, nullable = false)
     private String nombre;
 
-    @Column(name = "estado",length = 50,nullable = false)
-    private boolean estado;
+    @Column(name = "estado",nullable = false)
+    private Boolean estado;
 
     @Column(name ="especie",length = 100,nullable = false)
     private String especie;
 
-    public boolean getEstado() {
-
-        return estado;
-    }
-
-    public boolean setEstado() {
+    public boolean Estado() {
+        return false;
     }
 }
 
