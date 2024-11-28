@@ -30,5 +30,8 @@ public class Mascota {
 
         return estado;
     }
+
+    public boolean setEstado() {
+    }
 }
 

@@ -29,4 +29,6 @@ public class SolicitudDeAdopcion {
     @JoinColumn(name = "adoptante_id", referencedColumnName = "id", nullable = false)
     private Adoptante adoptante;
 
+    public SolicitudDeAdopcion(Adoptante adoptante, Mascota mascota, java.sql.Date fecha) {
+    }
 }

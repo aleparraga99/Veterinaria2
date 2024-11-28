@@ -43,8 +43,8 @@ public class MascotaService {
         }
     }
     
-    public boolean traerEstadoMascota(int id){
-        return mascotaRepository.findById(id)
+    public boolean traerEstadoMascota(int idMascota){
+        return mascotaRepository.findById(idMascota)
                 .map(Mascota::getEstado)
                 .orElseThrow(() -> new RuntimeException("Mascota no encontrada"));
     }
